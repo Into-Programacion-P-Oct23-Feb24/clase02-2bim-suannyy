@@ -19,16 +19,22 @@ public class Ejemplo06 {
     public static void main(String[] args) {
         // Declarar y generar arreglos en Java
         Scanner entrada = new Scanner(System.in);
-        int dato;
+        
         // arreglo de tipo entero
         int[] arreglo1 = new int[7];
-        
+        int dato;
         // Se asigna valores al arreglo, pidiendo valores por teclado
         // se usa un ciclo repetitivo
         for (int i = 0; i < arreglo1.length; i++) {
-        
+         
+        /* restrinjo ciertos valores los valores menores a 5 y mayores a 14 y 
+            el 10 y 12 y se resta automaticamente el valor de 5
+            */
             System.out.println("Ingrese un valor para el arreglo");
             dato = entrada.nextInt();
+            if(dato <5 || dato >14 || dato==10 || dato ==12) {
+                dato = 5;
+            }
             // se asigna la variable dato a la posición del arreglo
             // de acuerdo al valor de i
             arreglo1[i] = dato;
